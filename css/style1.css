@@ -1,0 +1,92 @@
+@charset "UTF-8";
+#contato .coluna2 .coluna, #apresentação .coluna1 .coluna {
+  display: inline-block;
+  width: 49%;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#contato .coluna2, #apresentação .coluna1 {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 98px;
+}
+
+#contato .coluna2 .coluna h2, #apresentação .coluna1 .coluna h1 {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#contato .coluna2 .coluna form .grupo-input input, #contato .coluna2 .coluna form .grupo-input textarea {
+  border-radius: 4px;
+  border: 0.5px solid grey;
+  opacity: 0.5;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  padding: 209px;
+  padding-top: 0;
+  margin-top: 32px;
+}
+
+#apresentação #img-logo {
+  display: flex;
+  width: 168px;
+  margin: auto;
+}
+#apresentação .coluna1 .coluna #img-coluna {
+  width: 100%;
+}
+#apresentação .coluna1 .coluna p {
+  line-height: 33px;
+}
+
+#contato .coluna2 .coluna ul {
+  padding-left: 0px;
+}
+#contato .coluna2 .coluna ul li {
+  list-style: none;
+}
+#contato .coluna2 .coluna ul li strong {
+  margin-right: 10px;
+}
+#contato .coluna2 .coluna form .grupo-input {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+#contato .coluna2 .coluna form .grupo-input textarea {
+  resize: none;
+  height: 156px;
+}
+#contato .coluna2 .coluna form .grupo-input textarea:focus {
+  border-color: purple;
+  outline-style: none;
+}
+#contato .coluna2 .coluna form .grupo-input label {
+  font-weight: bold;
+}
+#contato .coluna2 .coluna form .grupo-input input {
+  height: 35px;
+  padding: 0;
+}
+#contato .coluna2 .coluna form .grupo-input input:focus {
+  border-color: purple;
+  outline-style: none;
+}
+#contato .coluna2 .coluna form input[type=submit] {
+  margin-top: 15px;
+  border-radius: 4px;
+  padding: 5px 23px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+#contato .coluna2 .coluna form input[type=submit]:hover {
+  background-color: #b895cf;
+}
