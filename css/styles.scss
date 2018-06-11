@@ -1,0 +1,117 @@
+%blocos-coluna {
+  display: inline-block;
+  width: 49%;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+%coluna1-2 {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 98px;
+}
+
+%style-h {
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+%style-border {
+  border-radius: 4px;
+  border: .5px solid grey;
+  opacity: 0.5;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 209px;
+  padding-top: 0;
+  margin-top: 32px;
+}
+
+#apresentação {
+  #img-logo {
+    display: flex;
+    width: 168px;
+    margin: auto;
+  }
+  .coluna1 {
+    @extend %coluna1-2;
+    .coluna {
+      @extend %blocos-coluna;
+      h1 {
+        @extend %style-h;
+      }
+      #img-coluna {
+        width: 100%;
+      }
+      p {
+        line-height: 33px;
+      }
+    }
+  }
+}
+
+#contato {
+  .coluna2 {
+    @extend %coluna1-2;
+    .coluna {
+      @extend %blocos-coluna;
+      h2 {
+        @extend %style-h;
+      }
+      ul {
+        padding-left: 0px;
+        li {
+          list-style: none;
+          strong {
+            margin-right: 10px;
+          }
+        }
+      }
+      form {
+        .grupo-input {
+          display: flex;
+          flex-direction: column;
+          padding-top: 20px;
+          textarea {
+            @extend %style-border;
+            resize: none;
+            height: 156px;
+            &:focus {
+              border-color: purple;
+              outline-style: none;
+            }
+          }
+          label {
+            font-weight: bold;
+          }
+          input {
+            @extend %style-border;
+            height: 35px;
+            padding: 0;
+            &:focus {
+              border-color: purple;
+              outline-style: none;
+            }
+          }
+        }
+        input[type="submit"] {
+          margin-top: 15px;
+          border-radius: 4px;
+          padding: 5px 23px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: bold;
+          font-size: 16px;
+          &:hover {
+            background-color: rgb(184, 149, 207);
+          }
+        }
+      }
+    }
+  }
+}
